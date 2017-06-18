@@ -1,0 +1,23 @@
+<div class="nav">OMDb Movie Browser</div>
+        
+        <div class="input-group">
+            <input type="text" [(ngModel)]="str" class="form-control" placeholder="Search..." (input)="onInput($event)" />
+            <span class="input-group-btn"><button (click)="onClick()" class="btn btn-secondary">Search movie</button></span>
+        </div>
+
+    <table class="table">
+        <thead>
+            <th>Poster</th>
+            <th>Title</th>
+            <th>Year</th>
+        </thead>
+        <tbody > 
+            <tr *ngFor="let movie of search">           
+                    <td ><img src="{{movie.Poster}}" alt="poster" ></td>
+                    <td><h3 (click)="getId(movie.imdbID)"><a [routerLink]="['/movie', movie.imdbID]">{{movie.Title}}</a></h3></td>
+                    <td>{{movie.Year}}</td>
+            </tr>           
+        </tbody>
+    </table>
+
+    

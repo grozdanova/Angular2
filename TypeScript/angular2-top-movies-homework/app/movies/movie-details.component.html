@@ -1,0 +1,28 @@
+<div class="box">
+<h1>Movie Details</h1>
+<h3>{{movies?.Title}}</h3>
+<img src="{{movies?.Poster}}" alt="poster" >
+<span>
+        <p><strong>Released on:</strong> {{ movies?.Released }} ({{ movies?.Runtime }})</p>
+        <p>{{ movies?.Plot }}</p>
+
+        <p class="outer-p">
+          <div class="inner-p">
+            <span class="label label-primary">Directors :</span> {{ movies?.Director }}
+          </div>
+          <div class="inner-p">
+            <span class="label label-primary">Actors :</span> {{ movies?.Actors }}
+          </div>
+          <div class="inner-p">
+            <span class="label label-primary">Genre :</span> {{ movies?.Genre }}
+          </div>
+          <p class="outer-p">
+
+          <p class="outer-p-2">Ratings:
+          <br>
+          <strong>IMDb Rating</strong>: <span class="label label-success">{{ movies?.imdbRating }}</span>
+          <br>
+          <strong>IMDb Votes</strong>: <span class="label label-success">{{ movies?.imdbVotes }}</span>
+          </p>
+</span>
+</div>
